@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Roboto", serif;
+    overflow: hidden;
+}
+/* ----------Navigation Section--------- */
+.main-div {
+    display: flex;
+    flex-direction: column;
+}
+.main-div nav img {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+div.nav-items {
+    display: flex;
+    margin-top: -40px;
+    margin-left: 500px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.nav-item {
+    width: 140px;
+}
+
+.signin-btn {
+    display: flex;
+    margin-top: -18px;
+    margin-left: 85vw;
+    width: 100px;
+    height: 30px;
+    padding-left: 25px;
+    padding-top: 7px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: rgb(209, 38, 218);
+    border-style: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* --------Middle Portion------ */
+.intro-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+div.left-section h1 {
+    margin-top: 160px;
+    margin-left: 100px;
+    font-size: 80px;
+    color: rgb(165, 86, 239);
+    letter-spacing: 5px;
+}
+div.left-section h4 {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 460px;
+}
+.learn-more-btn {
+    margin-top: 100px;
+    margin-left: 100px;
+    height: 70px;
+    width: 380px;
+    font-size: 40px;
+    border-radius: 40px;
+    background: linear-gradient(
+        90deg,
+        rgb(150, 92, 242),
+        rgb(255, 138, 220));
+}
+/* -------Image Section-------- */
+.imgs-div {
+    display: flex;
+    flex-direction: row;
+    z-index: -1;
+}
+
+
+.vector-dot{
+    position: absolute;
+    top:65%;
+    right: 50%;
+    block-size: 40px;
+}
+
+.vector-img{
+    position: absolute;
+    top:65%;
+    right: 48%;
+    block-size: 180px;
+}
+.vector-dot + img {
+    height: 720px;
+    background: url('../images/backcover.svg');
+    background-repeat: no-repeat; 
+    background-size: contain;
+    position: absolute;
+    right: -2%;
+    top: 0%;    
+    padding: 6% 5% 0 0;
+    
+} 
+
+/* ------HOVERING EFFECTS------ */
+.main-div nav img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+
+button:hover{
+    animation-name: hoverEffect;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+::selection{
+    background-color: rgb(255, 138, 220);
+}
+
+.nav-item:hover{
+    background: linear-gradient(
+        0deg,
+        rgb(150, 92, 242),
+        rgb(255, 138, 220)
+        );
+    cursor: pointer;
+    text-align: center;
+    border-radius: 30px;
+    transition: all .3s ease;
+}
+
+@keyframes hoverEffect {
+    0% {
+        background: linear-gradient(
+        0deg,
+        rgb(150, 92, 242),
+        rgb(255, 138, 220)
+        );
+    }
+    25% {
+        background: linear-gradient(
+        90deg,
+        rgb(150, 92, 242),
+        rgb(255, 138, 220) 
+        );
+    }
+
+    50% {
+        background: linear-gradient(
+        180deg,
+        rgb(150, 92, 242),
+        rgb(255, 138, 220) 
+        );
+    }
+
+    100% {
+        background: linear-gradient(
+        260deg,
+        rgb(150, 92, 242),
+        rgb(255, 138, 220) 
+        );
+    }
+}
+/* --------media section---------  */
+@media screen and (min-width: 1200px) {
+    .left-section{
+     width: 100%;
+    }
+ }
+ /* ------media-2 for small devices---- */
+ @media screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+      }
+      .main-div nav img {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+      div.nav-items {
+        display: flex;
+        flex-direction: column;
+        margin-top: -40px;
+        margin-left: 280px;
+        font-size: 25px;
+        cursor: pointer;
+        width: 100%;
+
+    }
+    .signin-btn {
+        margin-left: 375px;
+        margin-top: -25px;
+        border-radius: 0%;
+        padding-left: 4px;
+        width: 60px;
+        
+    }
+    .intro-section {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-left: -80px;
+    }
+    .learn-more-btn {
+        width: 350px;
+    }
+    .imgs-div {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        z-index: -1;
+        margin-left: 80px;
+    }
+    .vector-dot + img {
+        position: fixed;
+        top: 10px;
+        left: -50px;
+        height: 140vh;
+    }
+    }
